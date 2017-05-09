@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 dependencies {
-    provided fileTree(dir: 'lib', include: '*.jar')
-    compile fileTree(dir: 'libs', include: '*.jar')
+    provided fileTree(include: '*.jar', dir: 'lib')
+    compile fileTree(include: '*.jar', dir: 'libs')
 }
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '23.0.3'
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
